@@ -1,4 +1,4 @@
-package by.epam.javaTraining.lesson2.task01;
+package by.epam.training.lesson2.task01;
 
 public class Task01 {
 
