@@ -118,5 +118,7 @@ public class Checker {
     public static boolean checkIsRectangularEquilateralTriangle(double a, double b, double c) {
         return ((a*a == b*b + c*c)&&(b==c)) ||((b*b == a*a + c*c) && (a==c))||((c*c == a*a + b*b)&&(a==b));
     }
-
+    public static boolean checkInRectangle(double x1, double y1, double x2, double y2, double x, double y) {
+        return  x>x1&&y<y1&&x<x2&&y>y2;
+    }
 }
