@@ -4,7 +4,7 @@ import by.epam.training.util.Printer;
 
 public class Runner {
     public static void main(String[] args) {
-        int number = 457321;
+        int number = 442231;
         double arithmMean = Calculator.calculateArithmeticMean(number);
         double geometrMean = Calculator.calculateGeometricMean(number);
 

@@ -56,5 +56,11 @@ public class GeometricClass {
         return calculateHypotenuseRectangular(a, b) + a + b;
     }
 
-    
+    public static double calculateDistance(double x1, double y1, double x2, double y2) {
+        double distancex = x1 - x2;
+        double distancey = y1 - y2;
+        return Math.sqrt((distancex * distancex) + (distancey * distancey));
+    }
+
+
 }

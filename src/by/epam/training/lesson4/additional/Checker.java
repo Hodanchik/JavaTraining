@@ -56,11 +56,13 @@ public class Checker {
     }
 
     public static boolean checkOneEven(double a, double b, double c) {
-        return (a % 10 == 0 && b % 10 != 0 && c % 10 != 0) || (a % 10 != 0 && b % 10 == 0 && c % 10 != 0) || (a % 10 != 0 && b % 10 != 0 && c % 10 == 0);
+        return (a % 10 == 0 && b % 10 != 0 && c % 10 != 0) || (a % 10 != 0 && b % 10 == 0 && c % 10 != 0)
+                || (a % 10 != 0 && b % 10 != 0 && c % 10 == 0);
     }
 
     public static boolean checkOneUneven(double a, double b, double c) {
-        return (a % 10 != 0 && b % 10 == 0 && c % 10 == 0) || (a % 10 == 0 && b % 10 != 0 && c % 10 == 0) || (a % 10 == 0 && b % 10 == 0 && c % 10 != 0);
+        return (a % 10 != 0 && b % 10 == 0 && c % 10 == 0) || (a % 10 == 0 && b % 10 != 0 && c % 10 == 0)
+                || (a % 10 == 0 && b % 10 == 0 && c % 10 != 0);
     }
 
     public static boolean checkEqualsEven(double a, double b, double c) {
@@ -68,13 +70,14 @@ public class Checker {
     }
 
     public static boolean checkTwoEven(double a, double b, double c) {
-        return (a % 10 == 0 && b % 10 == 0 && c % 10 != 0) || (a % 10 != 0 && b % 10 == 0 && c % 10 == 0) || (a % 10 == 0 && b % 10 != 0 && c % 10 == 0);
+        return (a % 10 == 0 && b % 10 == 0 && c % 10 != 0) || (a % 10 != 0 && b % 10 == 0 && c % 10 == 0)
+                || (a % 10 == 0 && b % 10 != 0 && c % 10 == 0);
     }
 
     public static boolean checkTwoUneven(double a, double b, double c) {
-        return (a % 10 != 0 && b % 10 != 0 && c % 10 == 0) || (a % 10 == 0 && b % 10 != 0 && c % 10 != 0) || (a % 10 != 0 && b % 10 == 0 && c % 10 != 0);
+        return (a % 10 != 0 && b % 10 != 0 && c % 10 == 0) || (a % 10 == 0 && b % 10 != 0 && c % 10 != 0)
+                || (a % 10 != 0 && b % 10 == 0 && c % 10 != 0);
     }
-
 
     public static boolean checkEquals(int number) {
         int n4 = number % 10 * 1000;
@@ -112,13 +115,17 @@ public class Checker {
     public static boolean checkIsIsoscelesTriangle(double a, double b, double c) {
         return ((a == b) && (a != c)) || ((b == c) && (a != c)) || (a == c) && (b != c);
     }
+
     public static boolean checkIsRectangularTriangle(double a, double b, double c) {
-        return (a*a == b*b + c*c)|| (b*b == a*a + c*c)||(c*c == a*a + b*b);
+        return (a * a == b * b + c * c) || (b * b == a * a + c * c) || (c * c == a * a + b * b);
     }
+
     public static boolean checkIsRectangularEquilateralTriangle(double a, double b, double c) {
-        return ((a*a == b*b + c*c)&&(b==c)) ||((b*b == a*a + c*c) && (a==c))||((c*c == a*a + b*b)&&(a==b));
+        return ((a * a == b * b + c * c) && (b == c)) || ((b * b == a * a + c * c)
+                && (a == c)) || ((c * c == a * a + b * b) && (a == b));
     }
+
     public static boolean checkInRectangle(double x1, double y1, double x2, double y2, double x, double y) {
-        return  x>x1&&y<y1&&x<x2&&y>y2;
+        return x > x1 && y < y1 && x < x2 && y > y2;
     }
 }

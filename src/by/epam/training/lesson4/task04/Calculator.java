@@ -4,24 +4,50 @@ public class Calculator {
 
 
     public static double calculateArithmeticMean(int number) {
-        int n6 = number % 10;
-        int n5 = number / 10 % 10;
-        int n4 = number / 100 % 10;
-        int n3 = number / 1000 % 10;
-        int n2 = number / 10000 % 10;
-        int n1 = number / 100000 % 10;
+        // count of digits in the number
+        double count = 6;
 
-        return (n1 + n2 + n3 + n4 + n5 + n6) / 6.0;
+        int n6 = number % 10;//it's the sixth digit of a number
+        number /= 10;
+
+        int n5 = number % 10;//it's the fifth digit of a number
+        number /= 10;
+
+        int n4 = number % 10; //it's the fourth digit of a number
+        number /= 10;
+
+        int n3 = number % 10;//it's the third digit of a number
+        number /= 10;
+
+        int n2 = number % 10;//it's the second digit of a number
+        number /= 10;
+
+        int n1 = number % 10;//it's the first digit of a number
+
+        return (n1 + n2 + n3 + n4 + n5 + n6) / count;
     }
 
     public static double calculateGeometricMean(int number) {
-        int n6 = number % 10;
-        int n5 = number / 10 % 10;
-        int n4 = number / 100 % 10;
-        int n3 = number / 1000 % 10;
-        int n2 = number / 10000 % 10;
-        int n1 = number / 100000 % 10;
+        // count of digits in the number
+        double count = 6;
 
-        return Math.pow((n1 * n2 * n3 * n4 * n5 * n6), 1.0 / 6);
+        int n6 = number % 10;//it's the sixth digit of a number
+        number /= 10;
+
+        int n5 = number % 10;//it's the fifth digit of a number
+        number /= 10;
+
+        int n4 = number % 10; //it's the fourth digit of a number
+        number /= 10;
+
+        int n3 = number % 10;//it's the third digit of a number
+        number /= 10;
+
+        int n2 = number % 10;//it's the second digit of a number
+        number /= 10;
+
+        int n1 = number % 10;//it's the first digit of a number
+
+        return Math.pow((n1 * n2 * n3 * n4 * n5 * n6), 1.0 / count);
     }
 }

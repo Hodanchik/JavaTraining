@@ -4,9 +4,9 @@ package by.epam.training.util;
 
 public class Printer {
 
-    public static void print(String str) {
+    public static void print(Object obj) {
 
-        System.out.println(str);
+        System.out.println(obj);
     }
 
 }

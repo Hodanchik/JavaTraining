@@ -4,11 +4,14 @@ import by.epam.training.util.Printer;
 
 public class Runner {
     public static void main(String[] args) {
-        int number = 6543;
-        boolean result = Checker.checkNumber(number);
+        int number = 2345;
+        boolean resultIncreasing = Checker.checkIncreasingNumber(number);
+        boolean resultDecreasing = Checker.checkDecreasingNumber(number);
 
         //This code ONLY for demonstration of results
-        String resultString = result ? " have " : " haven't ";
-        Printer.print("This number " + number + resultString + "a sequence");
+        String resultIncrString = resultIncreasing ? " have " : " haven't ";
+        Printer.print("This number " + number + resultIncrString + "an increasing sequence");
+        String resultDecString = resultDecreasing ? " have " : " haven't ";
+        Printer.print("This number " + number + resultDecString + "a descreasing sequence");
     }
 }
