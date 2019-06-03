@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-public class CounterCoinTest {
+public class CounterCoinTester {
 
     @Test
     public void throwCoin() {

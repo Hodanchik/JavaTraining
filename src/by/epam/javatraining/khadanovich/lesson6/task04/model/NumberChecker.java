@@ -1,12 +1,10 @@
 package by.epam.javatraining.khadanovich.lesson6.task04.model;
 
-public class CheckerNumbers {
-
+public class NumberChecker {
 
     public static boolean checkEven(int number) {
         boolean result = false;
         number = number > 0 ? number : -number;
-
 
         while (number / 10 != 0) {
             int rightNum = number % 10;

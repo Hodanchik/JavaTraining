@@ -1,6 +1,6 @@
 package by.epam.javatraining.khadanovich.lesson6.task02.model;
 
-public class CkeckerNumbers {
+public class NumberChecker {
 
     public static boolean checkIncreasingNumber(int item) {
         boolean result = false;
