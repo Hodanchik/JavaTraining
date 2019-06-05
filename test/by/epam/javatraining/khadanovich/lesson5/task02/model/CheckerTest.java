@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
 public class CheckerTest {
 
     @Test
@@ -24,7 +23,7 @@ public class CheckerTest {
 
     @Test
     public void checkSymbolByVowelThree() {
-        char ch = 'Y';
+        char ch = 'o';
         boolean expected = true;
         assertEquals(expected, Checker.checkSymbolByVowelThree(ch));
     }
@@ -43,4 +42,3 @@ public class CheckerTest {
         assertEquals(expected, Checker.checkSymbolByVowelFive(ch));
     }
 }
-

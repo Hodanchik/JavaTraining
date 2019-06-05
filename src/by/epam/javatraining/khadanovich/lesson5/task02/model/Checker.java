@@ -23,28 +23,18 @@ public class Checker {
     public static boolean checkSymbolByVowelThree(char ch) {
         switch (ch) {
             case 'A':
-                return true;
             case 'a':
-                return true;
             case 'E':
-                return true;
             case 'e':
-                return true;
             case 'I':
-                return true;
             case 'i':
-                return true;
             case 'O':
-                return true;
             case 'o':
-                return true;
             case 'U':
-                return true;
             case 'u':
                 return true;
             default:
                 return false;
-
         }
     }
 
@@ -58,7 +48,6 @@ public class Checker {
             }
         }
         return false;
-
     }
 
     public static boolean checkSymbolByVowelFive(char ch) {

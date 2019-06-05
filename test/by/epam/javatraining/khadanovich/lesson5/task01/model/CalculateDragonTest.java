@@ -1,10 +1,8 @@
 package by.epam.javatraining.khadanovich.lesson5.task01.model;
 
-
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-
 
 public class CalculateDragonTest {
 

@@ -4,14 +4,13 @@ import java.util.Random;
 
 public class MoodSensor {
     private static final Random RND = new Random();
-    public static final int MOOD_COUNT = 6;
-
-    public static final String BAD_MOOD = ":******(";
-    public static final String CRY_MOOD = ":*(";
-    public static final String CALM_MOOD = ":-|";
-    public static final String HAPPY_MOOD = ":-)";
-    public static final String LAUGH_MOOD = ":-D";
-    public static final String PLAYFUL_MOOD = ":-P";
+    private static final int MOOD_COUNT = 6;
+    private static final String BAD_MOOD = ":******(";
+    private static final String CRY_MOOD = ":*(";
+    private static final String CALM_MOOD = ":-|";
+    private static final String HAPPY_MOOD = ":-)";
+    private static final String LAUGH_MOOD = ":-D";
+    private static final String PLAYFUL_MOOD = ":-P";
 
     public static String checkMood() {
         String mood = CALM_MOOD;
