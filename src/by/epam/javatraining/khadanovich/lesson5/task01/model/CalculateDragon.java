@@ -3,33 +3,37 @@ package by.epam.javatraining.khadanovich.lesson5.task01.model;
 public class CalculateDragon {
 
     public static int calculateHeadsDragon(double age) {
-        int headsAtBirth = 3;
-        int headsAtChildhoodYear = 3; //grows heads in one year
-        int headsAtYouthYear = 2;     //grows heads in one year
-        int headsAtOldYear = 1;       //grows heads in one year
-        int childhoodPeriod = 200;
-        int youthPeriod = 300;
-        int headsAtTheEndChildhood = headsAtBirth
-                + childhoodPeriod * headsAtChildhoodYear;
-        int headsAtTheEndYouth = headsAtTheEndChildhood
-                + (youthPeriod - childhoodPeriod) * headsAtYouthYear;
-        if (age <= childhoodPeriod) {
+        final int HEADS_AT_BIRTH = 3;
+        final int HEADS_AT_CHILDHOOD_YEAR = 3; //grows heads in one year
+        final int HEADS_AT_YOUTH_YEAR = 2;     //grows heads in one year
+        final int HEADS_AT_OLD_YEAR = 1;       //grows heads in one year
+        final int CHILDHOOD_PERIOD = 200;
+        final int YOUTH_PERIOD = 300;
+        final int HEADS_At_THE_END_CHILDHOOD = HEADS_AT_BIRTH
+                + CHILDHOOD_PERIOD * HEADS_AT_CHILDHOOD_YEAR;
+        final int HEADS_AT_THE_END_YOUTH = HEADS_At_THE_END_CHILDHOOD
+                + (YOUTH_PERIOD - CHILDHOOD_PERIOD) * HEADS_AT_YOUTH_YEAR;
+        int headCounter;
+
+        if (age <= CHILDHOOD_PERIOD) {
             if (age == 0) {
-                return headsAtBirth;
+                headCounter = HEADS_AT_BIRTH;
+            } else {
+                headCounter = HEADS_AT_BIRTH + (int) age * HEADS_AT_CHILDHOOD_YEAR;
             }
-            return headsAtBirth + (int) age * headsAtChildhoodYear;
-        } else if (age <= youthPeriod) {
-            return headsAtTheEndChildhood + (int) (age - childhoodPeriod) * headsAtYouthYear;
+        } else if (age <= YOUTH_PERIOD) {
+            headCounter = HEADS_At_THE_END_CHILDHOOD +
+                    (int) (age - CHILDHOOD_PERIOD) * HEADS_AT_YOUTH_YEAR;
         } else {
-            return headsAtTheEndYouth + (int) (age - youthPeriod)
-                    * headsAtOldYear;
+            headCounter = HEADS_AT_THE_END_YOUTH + (int) (age - YOUTH_PERIOD)
+                    * HEADS_AT_OLD_YEAR;
         }
-
+        return headCounter;
     }
-
 
     public static int calculateEyesDragon(double age) {
-        int countEyesAtHead = 2;
-        return calculateHeadsDragon(age) * countEyesAtHead;
+        final int COUNT_EYES_AT_HEAD = 2;
+        return calculateHeadsDragon(age) * COUNT_EYES_AT_HEAD;
     }
 }
+

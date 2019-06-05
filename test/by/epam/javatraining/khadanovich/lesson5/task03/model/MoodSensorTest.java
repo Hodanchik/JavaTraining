@@ -7,10 +7,6 @@ import org.junit.Test;
 
 public class MoodSensorTest {
 
-    @Test
-    public void createRandomInt() {
-        assertEquals(2.5, MoodSensor.createRandomInt(), 2.5);
-    }
 
     @Test
     public void checkMood() {

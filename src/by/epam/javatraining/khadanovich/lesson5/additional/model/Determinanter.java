@@ -3,6 +3,11 @@ package by.epam.javatraining.khadanovich.lesson5.additional.model;
 public class Determinanter {
 
     public static String determinateNextDay(int day, int month, int year) {
+        final int MAX_DAY_FEBRUARY = 29;
+        final int MIN_DAY_FEBRUARY = 28;
+        final int MAX_DAY_MONTH = 31;
+        final int MIN_DAY_MONTH = 30;
+        String nextDayStr = "Incorrect Date";
         int nextDay = day + 1;
         int nextYear = year;
         int nextMonth = month;
@@ -15,7 +20,7 @@ public class Determinanter {
         boolean correctMonth = month <= 12 && month > 0;
         boolean correctYear = year >= 0;
         if (correctDay && correctMonth && correctYear) {
-            if (day == 31) {
+            if (day == MAX_DAY_MONTH) {
                 if (thirtyOneDayMonth) {
                     nextDay = 1;
                     nextMonth = month + 1;
@@ -25,38 +30,39 @@ public class Determinanter {
                     nextMonth = 1;
                     nextYear = year + 1;
                 } else {
-                    return "Incorrect Date";
+                    return nextDayStr;
                 }
             }
-            if (day == 30) {
+            if (day == MIN_DAY_MONTH) {
                 if (thirtyDayMonth) {
                     nextDay = 1;
                     nextMonth = month + 1;
                     nextYear = year;
-                } else if (month == 2) {
-                    return "Incorrect date";
+                } else if (februaryMonth) {
+                    return nextDayStr;
                 }
             }
-            if (day == 29 && februaryMonth) {
+            if (day == MAX_DAY_FEBRUARY && februaryMonth) {
                 if (bigYear) {
                     nextDay = 1;
                     nextMonth = month + 1;
                     nextYear = year;
                 } else {
-                    return "Incorrect date";
+                    return nextDayStr;
                 }
             }
-            if (day == 28 && februaryMonth) {
+            if (day == MIN_DAY_FEBRUARY && februaryMonth) {
                 if (!bigYear) {
                     nextDay = 1;
                     nextMonth = month + 1;
                     nextYear = year;
                 }
             }
-            return "Next day: " + nextDay + "." + nextMonth + "." + nextYear;
+            nextDayStr = "Next day: " + nextDay + "." + nextMonth + "." + nextYear;
         } else {
-            return "Incorrect date";
+            return nextDayStr;
         }
+        return nextDayStr;
     }
 }
 
