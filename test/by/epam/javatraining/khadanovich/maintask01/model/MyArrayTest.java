@@ -10,7 +10,13 @@ public class MyArrayTest {
 
     @Test
     public void add() {
-        //add test
+        MyArray array = new MyArray();
+        int sizeBeforeAdd = 0;
+        assertEquals(sizeBeforeAdd, array.size());
+        double num = 12;
+        array.add(num);
+        int sizeAfterAdd = 1;
+        assertEquals(sizeAfterAdd, array.size());
     }
 
     @Test
@@ -45,12 +51,12 @@ public class MyArrayTest {
     @Test
     public void findMaxElement() throws NullArrayException {
         MyArray array = new MyArray();
-        array.add(23);
-        array.add(223);
+        array.add(-29);
+        array.add(-23);
         array.add(-80);
-        array.add(2333);
-        array.add(23);
-        double expected = 2333;
+        array.add(-2333);
+        array.add(-23);
+        double expected = -23;
         assertEquals(expected, array.findMaxElement(), 0);
     }
 
@@ -78,7 +84,13 @@ public class MyArrayTest {
         assertEquals(expected, array.findMinElement(), 0);
 
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void findArithmeticalMeanException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.findArithmeticalMean();
+    }
+
     @Test
     public void findArithmeticalMean() throws NullArrayException {
         MyArray array = new MyArray();
@@ -90,7 +102,13 @@ public class MyArrayTest {
         double expected = 11.8;
         assertEquals(expected, array.findArithmeticalMean(), 0);
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void findGeometricMeanException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.findGeometricMean();
+    }
+
     @Test
     public void findGeometricMean() throws NullArrayException {
         MyArray array = new MyArray();
@@ -102,7 +120,13 @@ public class MyArrayTest {
         double expected = 7.6022015924038495;
         assertEquals(expected, array.findGeometricMean(), 0);
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void checkIncreasingException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.checkIncreasing();
+    }
+
     @Test
     public void checkIncreasing() throws NullArrayException {
         MyArray array = new MyArray();
@@ -121,7 +145,13 @@ public class MyArrayTest {
         assertFalse(arrayNoIncreasing.checkIncreasing());
     }
 
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void checkDescreasingException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.checkDescreasing();
+    }
+
     @Test
     public void checkDescreasing() throws NullArrayException {
         MyArray array = new MyArray();
@@ -139,7 +169,13 @@ public class MyArrayTest {
         assertTrue(array.checkDescreasing());
         assertFalse(arrayNoDescreasing.checkDescreasing());
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void findLocalMinimumPositionException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.findLocalMinimumPosition();
+    }
+
     @Test
     public void findLocalMinimumPosition() throws NullArrayException {
         MyArray array = new MyArray();
@@ -156,7 +192,13 @@ public class MyArrayTest {
         assertEquals(expected, array.findLocalMinimumPosition());
         assertEquals(expectedTwo, arrayTwo.findLocalMinimumPosition());
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void findLocalMaximumPositionException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.findLocalMaximumPosition();
+    }
+
     @Test
     public void findLocalMaximumPosition() throws NullArrayException {
         MyArray array = new MyArray();
@@ -173,7 +215,14 @@ public class MyArrayTest {
         assertEquals(expected, array.findLocalMaximumPosition());
         assertEquals(expectedTwo, arrayTwo.findLocalMaximumPosition());
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void linearSearchException() throws NullArrayException {
+        MyArray array = new MyArray();
+        double searchDouble = 86;
+        array.linearSearch(searchDouble);
+    }
+
     @Test
     public void linearSearch() throws NullArrayException {
         MyArray array = new MyArray();
@@ -193,7 +242,14 @@ public class MyArrayTest {
         assertEquals(expectedTwo, arrayTwo.linearSearch(searchDoubleTwo));
 
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void binarySearchException() throws NullArrayException {
+        MyArray array = new MyArray();
+        double searchDouble = 86;
+        array.binarySearch(searchDouble);
+    }
+
     @Test
     public void binarySearch() throws NullArrayException {
         MyArray array = new MyArray();
@@ -213,7 +269,13 @@ public class MyArrayTest {
         assertEquals(expectedTwo, arrayTwo.binarySearch(searchDoubleTwo));
 
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void reversArrayException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.reversArray();
+    }
+
     @Test
     public void reversArray() throws NullArrayException {
         MyArray array = new MyArray();
@@ -231,7 +293,14 @@ public class MyArrayTest {
         Assert.assertArrayEquals(expected, reversArray, 0);
 
     }
-    //add test with NullArrayException
+
+
+    @Test(expected = NullArrayException.class)
+    public void bubbleSortIncreaseException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.bubbleSortIncrease();
+    }
+
     @Test
     public void bubbleSortIncrease() throws NullArrayException {
         MyArray array = new MyArray();
@@ -249,7 +318,12 @@ public class MyArrayTest {
         Assert.assertArrayEquals(expected, sortIncreaseArray, 0);
 
     }
-//add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void bubbleSortDescreasException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.bubbleSortDescreas();
+    }
 
     @Test
     public void bubbleSortDescreas() throws NullArrayException {
@@ -268,7 +342,12 @@ public class MyArrayTest {
         Assert.assertArrayEquals(expected, sortDescreasArray, 0);
 
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void insertionSortIncreasException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.insertionSortIncreas();
+    }
 
     @Test
     public void insertionSortIncreas() throws NullArrayException {
@@ -286,7 +365,12 @@ public class MyArrayTest {
 
         Assert.assertArrayEquals(expected, sortIncreaseArray, 0);
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void insertionSortDiscreasException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.insertionSortDiscreas();
+    }
 
     @Test
     public void insertionSortDiscreas() throws NullArrayException {
@@ -306,7 +390,11 @@ public class MyArrayTest {
 
     }
 
-//add test with NullArrayException
+    @Test(expected = NullArrayException.class)
+    public void selectionSortIncreasException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.selectionSortIncreas();
+    }
 
     @Test
     public void selectionSortIncreas() throws NullArrayException {
@@ -324,7 +412,12 @@ public class MyArrayTest {
 
         Assert.assertArrayEquals(expected, sortIncreaseArray, 0);
     }
-//add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void selectionSortDiscreasException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.selectionSortDiscreas();
+    }
 
     @Test
     public void selectionSortDiscreas() throws NullArrayException {
@@ -342,7 +435,12 @@ public class MyArrayTest {
 
         Assert.assertArrayEquals(expected, sortDescreasArray, 0);
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void mergeSortIncreasException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.mergeSortIncreas();
+    }
 
     @Test
     public void mergeSortIncreas() throws NullArrayException {
@@ -361,7 +459,12 @@ public class MyArrayTest {
         Assert.assertArrayEquals(expected, sortIncreaseArray, 0);
 
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void mergeSortDiscreasException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.mergeSortDiscreas();
+    }
 
     @Test
     public void mergeSortDiscreas() throws NullArrayException {
@@ -379,7 +482,12 @@ public class MyArrayTest {
 
         Assert.assertArrayEquals(expected, sortDescreasArray, 0);
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void quicksortIncreasException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.quicksortIncreas();
+    }
 
     @Test
     public void quicksortIncreas() throws NullArrayException {
@@ -398,7 +506,12 @@ public class MyArrayTest {
         Assert.assertArrayEquals(expected, sortIncreaseArray, 0);
 
     }
-    //add test with NullArrayException
+
+    @Test(expected = NullArrayException.class)
+    public void quicksortDiscreasException() throws NullArrayException {
+        MyArray array = new MyArray();
+        array.quicksortDiscreas();
+    }
 
     @Test
     public void quicksortDiscreas() throws NullArrayException {
@@ -415,6 +528,5 @@ public class MyArrayTest {
         double[] expected = new double[]{88, 23, 3, 1};
 
         Assert.assertArrayEquals(expected, sortDescreasArray, 0);
-
     }
 }

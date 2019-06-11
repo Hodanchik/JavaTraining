@@ -12,7 +12,6 @@ import org.apache.log4j.Logger;
 
 public class MyArray {
     public static Logger logger = Logger.getRootLogger();
-
     // array of elements
     private double[] elementsArray;
     // size of array
@@ -68,23 +67,23 @@ public class MyArray {
     }
 
     public double findMaxElement() throws NullArrayException {
+
         if (size != 0) {
-            double max = Double.MIN_VALUE;
-            for (double doubleNum : elementsArray) {
-                if (doubleNum > max) {
-                    max = doubleNum;
+            double max = elementsArray[0];
+            for (int i = 1; i < size; i++) {
+                if (elementsArray[i] > max) {
+                    max = elementsArray[i];
                 }
             }
             return max;
         } else throw new NullArrayException("You can't passed an array of zero length");
-
     }
 
 
     public double findMinElement() throws NullArrayException {
         if (size != 0) {
             double min = elementsArray[0];
-            for (int i = 1; i < elementsArray.length; i++) {
+            for (int i = 1; i < size; i++) {
                 if (elementsArray[i] < min) {
                     min = elementsArray[i];
                 }
@@ -142,16 +141,16 @@ public class MyArray {
         if (size != 0) {
             int position = -1;// position number of local minimum
             int lastIndex = index - 1; // last Position element
-            int index = 1; //first position element;
+            int indexElement = 1; //first position element;
 //check for 0 element
             if (elementsArray[0] < elementsArray[1]) {
                 position = 0;
             }
-            while (position == -1 && index < lastIndex) {
+            while (position == -1 && indexElement < lastIndex) {
 
-                if (elementsArray[index] < elementsArray[index - 1] || elementsArray[index] < elementsArray[index + 1]) {
-                    position = index;
-                } else index++;
+                if (elementsArray[indexElement] < elementsArray[indexElement - 1] || elementsArray[indexElement] < elementsArray[indexElement + 1]) {
+                    position = indexElement;
+                } else indexElement++;
             }
             //check for last element
             if (position == -1 && elementsArray[lastIndex] < elementsArray[lastIndex - 1]) {
@@ -165,15 +164,15 @@ public class MyArray {
         if (size != 0) {
             int position = -1;// position number of local maximum
             int lastIndex = index - 1; // last Position element
-            int index = 1; //first position element;
+            int indexElement = 1; //first position element;
             //check for 0 element
             if (elementsArray[0] > elementsArray[1]) {
                 position = 0;
             }
-            while (position == -1 && index < lastIndex) {
-                if (elementsArray[index] > elementsArray[index - 1] || elementsArray[index] > elementsArray[index + 1]) {
-                    position = index;
-                } else index++;
+            while (position == -1 && indexElement < lastIndex) {
+                if (elementsArray[indexElement] > elementsArray[indexElement - 1] || elementsArray[indexElement] > elementsArray[indexElement + 1]) {
+                    position = indexElement;
+                } else indexElement++;
             }
             //check for last element
             if (position == -1 && elementsArray[lastIndex] > elementsArray[lastIndex - 1]) {
