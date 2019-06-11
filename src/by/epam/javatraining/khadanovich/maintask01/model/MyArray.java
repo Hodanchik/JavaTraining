@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
  *
  * @author Tatsiana Khadanovich
  * @version 1.0
+ * @createdate 09/06/19
  */
 
 public class MyArray {
@@ -148,7 +149,8 @@ public class MyArray {
             }
             while (position == -1 && indexElement < lastIndex) {
 
-                if (elementsArray[indexElement] < elementsArray[indexElement - 1] || elementsArray[indexElement] < elementsArray[indexElement + 1]) {
+                if (elementsArray[indexElement] < elementsArray[indexElement - 1]
+                        || elementsArray[indexElement] < elementsArray[indexElement + 1]) {
                     position = indexElement;
                 } else indexElement++;
             }
@@ -170,7 +172,8 @@ public class MyArray {
                 position = 0;
             }
             while (position == -1 && indexElement < lastIndex) {
-                if (elementsArray[indexElement] > elementsArray[indexElement - 1] || elementsArray[indexElement] > elementsArray[indexElement + 1]) {
+                if (elementsArray[indexElement] > elementsArray[indexElement - 1]
+                        || elementsArray[indexElement] > elementsArray[indexElement + 1]) {
                     position = indexElement;
                 } else indexElement++;
             }
