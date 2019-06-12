@@ -142,10 +142,12 @@ public class MyArray {
         if (size != 0) {
             int position = -1;// position number of local minimum
             int lastIndex = index - 1; // last Position element
-            int indexElement = 1; //first position element;
+            int indexElement = 0;//first position element;
 //check for 0 element
-            if (elementsArray[0] < elementsArray[1]) {
-                position = 0;
+            if (elementsArray[indexElement] < elementsArray[indexElement + 1]) {
+                position = indexElement;
+            } else {
+                indexElement++;
             }
             while (position == -1 && indexElement < lastIndex) {
 
@@ -166,10 +168,12 @@ public class MyArray {
         if (size != 0) {
             int position = -1;// position number of local maximum
             int lastIndex = index - 1; // last Position element
-            int indexElement = 1; //first position element;
+            int indexElement = 0; //first position element;
             //check for 0 element
-            if (elementsArray[0] > elementsArray[1]) {
-                position = 0;
+            if (elementsArray[indexElement] > elementsArray[indexElement + 1]) {
+                position = indexElement;
+            } else {
+                indexElement++;
             }
             while (position == -1 && indexElement < lastIndex) {
                 if (elementsArray[indexElement] > elementsArray[indexElement - 1]
@@ -187,53 +191,52 @@ public class MyArray {
 
     public int linearSearch(double elementToSearch) throws NullArrayException {
         if (size != 0) {
-            int lastIndex = index - 1; // last Position element
-            for (int index = 0; index <= lastIndex; index++) {
-                if (elementsArray[index] == elementToSearch)
-                    return index;
+            int positionSearchElement = -1;
+            for (int position = 0; position < size && positionSearchElement == -1; position++) {
+                if (elementsArray[position] == elementToSearch)
+                    positionSearchElement = position;
             }
-            return -1;
+            return positionSearchElement;
         } else throw new NullArrayException("You can't passed an array of zero length");
     }
-
 
     //this method  Only for sorted massive
     public int binarySearch(double elementToSearch) throws NullArrayException {
 //binary search Only for sorted massive
+        int firstIndex = 0;
+        int lastIndex = size - 1;
+        int searchIndex = -1; //array has't element
         if (checkIncreasing()) {
-            int firstIndex = 0;
-            int lastIndex = size - 1;
             // termination conditions
-            while (firstIndex <= lastIndex) {
+            while (firstIndex < size && searchIndex == -1) {
                 int middleIndex = (firstIndex + lastIndex) / 2;
 
                 if (elementsArray[middleIndex] == elementToSearch) {
-                    return middleIndex;
+                    searchIndex = middleIndex;
                 } else if (elementsArray[middleIndex] < elementToSearch) {
                     firstIndex = middleIndex + 1;
-                } else if (elementsArray[middleIndex] > elementToSearch) {
+                } else {
                     lastIndex = middleIndex - 1;
                 }
             }
-            return -1;
+            return searchIndex;
         } else if (checkDescreasing()) {
-            int firstIndex = 0;
-            int lastIndex = size - 1;
+
             // termination conditions
-            while (firstIndex <= lastIndex) {
+            while (firstIndex < size && searchIndex == -1) {
                 int middleIndex = (firstIndex + lastIndex) / 2;
 
                 if (elementsArray[middleIndex] == elementToSearch) {
-                    return middleIndex;
+                    searchIndex = middleIndex;
                 } else if (elementsArray[middleIndex] > elementToSearch) {
                     firstIndex = middleIndex + 1;
-                } else if (elementsArray[middleIndex] < elementToSearch) {
+                } else {
                     lastIndex = middleIndex - 1;
                 }
             }
-            return -1;
+            return searchIndex;
         }
-        return -1;
+        return searchIndex;
     }
 
     public double[] reversArray() throws NullArrayException {
