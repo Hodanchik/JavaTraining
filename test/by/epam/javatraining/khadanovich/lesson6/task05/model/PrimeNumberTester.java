@@ -7,8 +7,17 @@ public class PrimeNumberTester {
 
     @Test
     public void isNumberPrime() throws Exception {
-        int number = 11;
-        boolean expected = true;
-        Assert.assertEquals(expected, PrimeNumber.isNumberPrime(number));
+        int numberOne = 11;
+        boolean expectedOne = true;
+        int numberTwo = 1;
+        boolean expectedTwo = false;
+        int numberThree = -9;
+        boolean expectedThree = false;
+        int numberFour = 3;
+        boolean expectedFour = true;
+        Assert.assertEquals(expectedOne, PrimeNumber.isNumberPrime(numberOne));
+        Assert.assertEquals(expectedTwo, PrimeNumber.isNumberPrime(numberTwo));
+        Assert.assertEquals(expectedThree, PrimeNumber.isNumberPrime(numberThree));
+        Assert.assertEquals(expectedFour, PrimeNumber.isNumberPrime(numberFour));
     }
 }

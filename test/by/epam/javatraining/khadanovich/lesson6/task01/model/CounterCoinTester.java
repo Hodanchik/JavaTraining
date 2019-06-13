@@ -10,13 +10,7 @@ import org.junit.Test;
 public class CounterCoinTester {
 
     @Test
-    public void throwCoin() {
-        int expected = 1;
-        assertEquals(expected, CounterCoin.throwCoin(), 1);
-    }
-
-    @Test
-    public void countCoin() {
+    public void countCoinCountEagle() {
         int time = 50;
         int expected = 25;
         assertEquals(expected, CounterCoin.countCoinCountEagle(time), 10);

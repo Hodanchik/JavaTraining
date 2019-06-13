@@ -1,14 +1,16 @@
 package by.epam.javatraining.khadanovich.lesson6.additional.task04.model;
 
-public class IsNumberPalindrom {
+public class PalindromChecker {
 
-    public static boolean checkIfNumberPalindrom(int numberToCheck) {
-
-        if (numberToCheck < 10)
-            return true;
-
+    public static boolean checkIsNumberPalindrom(int numberToCheck) {
+        numberToCheck = numberToCheck > 0 ? numberToCheck : -numberToCheck;
+        boolean result;
         int base = 0;
         int original = numberToCheck;
+
+        if (numberToCheck < 10) {
+            return true;
+        }
 
         while (original > 0) {
             base *= 10;
@@ -18,4 +20,5 @@ public class IsNumberPalindrom {
         return base == numberToCheck;
     }
 }
+
 

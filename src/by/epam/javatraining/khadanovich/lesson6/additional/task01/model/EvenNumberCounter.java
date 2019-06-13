@@ -9,11 +9,10 @@ public class EvenNumberCounter {
         while (numberToCount > 0) {
             int numeric = numberToCount % 10;
 
-            if (numeric % 2 == 0) {
+            if (numeric % 2 == 0 && numeric != 0) {
                 count += 1;
             }
             numberToCount /= 10;
-
         }
         return count;
     }

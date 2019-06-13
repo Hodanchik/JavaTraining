@@ -5,7 +5,8 @@ public class PerfectNumber {
 
     public static boolean isNumberPerfect(int numberToCheck) {
         int sum = 0;
-        for (int i = 1; i < numberToCheck; i++) {
+        int halfSize = numberToCheck / 2;
+        for (int i = 1; i <= halfSize; i++) {
             if (numberToCheck % i == 0)
                 sum += i;
         }

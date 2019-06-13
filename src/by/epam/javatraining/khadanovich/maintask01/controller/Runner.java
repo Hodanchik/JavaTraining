@@ -1,7 +1,6 @@
 package by.epam.javatraining.khadanovich.maintask01.controller;
 
 
-import by.epam.javatraining.khadanovich.maintask01.model.exception.NullArrayException;
 import org.apache.log4j.BasicConfigurator;
 
 public class Runner {

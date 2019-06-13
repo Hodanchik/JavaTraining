@@ -4,8 +4,7 @@ public class NumberChecker {
 
     public static boolean checkEven(int number) {
         boolean result = false;
-        number = number > 0 ? number : -number;
-
+       //remove?  number = number > 0 ? number : -number;
         while (number / 10 != 0) {
             int rightNum = number % 10;
             number /= 10;

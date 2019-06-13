@@ -14,5 +14,18 @@ public class NumberOfDifferentDigits {
         }
         return true;
     }
+
+    public static boolean checkIfNumberIsOfSameDigits(int numberToCheck) {
+
+        String stringNumberToCheck = Integer.toString(numberToCheck);
+        int length = stringNumberToCheck.length() - 1;
+
+        for (int i = 0; i < length; i++) {
+            if (!stringNumberToCheck.substring(i + 1)
+                    .contains(String.valueOf(stringNumberToCheck.charAt(i))))
+                return false;
+        }
+        return true;
+    }
 }
 
