@@ -7,22 +7,30 @@ import static org.junit.Assert.*;
 public class NumberOfDifferentDigitsTest {
 
     @Test
-    public void checkIfNumberIsOfDifferentDigits() {
+    public void checkIfNumberIsOfDifferentDigitsOneTest() {
         int numberOne = 123459;
         boolean expectedOne = true;
+        assertEquals(expectedOne, NumberOfDifferentDigits.checkIfNumberIsOfDifferentDigits(numberOne));
+    }
+
+    @Test
+    public void checkIfNumberIsOfDifferentDigitsTwoTest() {
         int numberTwo = 1159;
         boolean expectedTwo = false;
-        assertEquals(expectedOne, NumberOfDifferentDigits.checkIfNumberIsOfDifferentDigits(numberOne));
         assertEquals(expectedTwo, NumberOfDifferentDigits.checkIfNumberIsOfDifferentDigits(numberTwo));
     }
 
     @Test
-    public void checkIfNumberIsOfSameDigits() {
+    public void checkIfNumberIsOfSameDigitsOneTest() {
         int numberOne = 11111;
         boolean expectedOne = true;
+        assertEquals(expectedOne, NumberOfDifferentDigits.checkIfNumberIsOfSameDigits(numberOne));
+    }
+
+    @Test
+    public void checkIfNumberIsOfSameDigitsTwoTest() {
         int numberTwo = 1159;
         boolean expectedTwo = false;
-        assertEquals(expectedOne, NumberOfDifferentDigits.checkIfNumberIsOfSameDigits(numberOne));
         assertEquals(expectedTwo, NumberOfDifferentDigits.checkIfNumberIsOfSameDigits(numberTwo));
     }
 }

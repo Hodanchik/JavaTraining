@@ -4,7 +4,6 @@ public class PalindromChecker {
 
     public static boolean checkIsNumberPalindrom(int numberToCheck) {
         numberToCheck = numberToCheck > 0 ? numberToCheck : -numberToCheck;
-        boolean result;
         int base = 0;
         int original = numberToCheck;
 

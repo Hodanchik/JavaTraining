@@ -7,9 +7,8 @@ public class Checker {
 
         Character[] vowelChar = {'e', 'E', 'u', 'U', 'i', 'I', 'o', 'O', 'a', 'A'};
         for (char vowel : vowelChar) {
-            {
-                if (vowel == ch)
-                    return true;
+            if (vowel == ch) {
+                return true;
             }
         }
         return false;
@@ -42,9 +41,8 @@ public class Checker {
         Character[] vowelChar = {'\u0041', '\u0045', '\u0049', '\u004F', '\u0055', '\u0061', '\u0065', '\u0069',
                 '\u006F', '\u0075'};
         for (char vowel : vowelChar) {
-            {
-                if (vowel == ch)
-                    return true;
+            if (vowel == ch) {
+                return true;
             }
         }
         return false;

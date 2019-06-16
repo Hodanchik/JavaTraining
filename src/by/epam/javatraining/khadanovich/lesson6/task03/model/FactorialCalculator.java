@@ -7,8 +7,6 @@ public class FactorialCalculator {
         int result = 1;
         //if number = 0 or number = 1 factorial = 1;
 
-        /* remove this line or this reduces readability?
-          if(number !=0 || number !=1) */
         for (int i = 2; i <= number; i++) {
             result *= i;
         }

@@ -5,12 +5,13 @@ public class MaxDigitOfANumber {
     public static int calculateMaxDigitOfANumber(int numberToCheck) {
         numberToCheck = numberToCheck > 0 ? numberToCheck : -numberToCheck;
         int maxNumber = 0;
+        int maxDigit = 9;
         int digit;
         while (numberToCheck > 0) {
             digit = numberToCheck % 10;
             if (digit > maxNumber) {
                 maxNumber = digit;
-                if (digit == 9) {
+                if (digit == maxDigit) {
                     return digit;
                 }
             }

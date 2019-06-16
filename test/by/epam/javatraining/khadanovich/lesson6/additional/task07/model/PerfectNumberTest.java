@@ -7,12 +7,16 @@ import static org.junit.Assert.*;
 public class PerfectNumberTest {
 
     @Test
-    public void isNumberPerfect() {
+    public void isNumberPerfectOneTest() {
         int numberOne = 496;
         boolean expectedOne = true;
+        assertEquals(expectedOne, PerfectNumber.isNumberPerfect(numberOne));
+    }
+
+    @Test
+    public void isNumberPerfectTwoTest() {
         int numberTwo = 498;
         boolean expectedTwo = false;
-        assertEquals(expectedOne, PerfectNumber.isNumberPerfect(numberOne));
         assertEquals(expectedTwo, PerfectNumber.isNumberPerfect(numberTwo));
     }
 }

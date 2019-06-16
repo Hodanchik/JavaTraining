@@ -7,28 +7,44 @@ import static org.junit.Assert.*;
 public class CalculatorTest {
 
     @Test
-    public void calculateSum() {
+    public void calculateSumOneTest() {
         int numberOne = -123;
         int expectedOne = 6;
+        assertEquals(expectedOne, Calculator.calculateSum(numberOne));
+    }
+
+    @Test
+    public void calculateSumTwoTest() {
         int numberTwo = 123;
         int expectedTwo = 6;
+        assertEquals(expectedTwo, Calculator.calculateSum(numberTwo));
+    }
+
+    @Test
+    public void calculateSumThreeTest() {
         int numberThree = 3;
         int expectedThree = 3;
-        assertEquals(expectedOne, Calculator.calculateSum(numberOne));
-        assertEquals(expectedTwo, Calculator.calculateSum(numberTwo));
         assertEquals(expectedThree, Calculator.calculateSum(numberThree));
     }
 
     @Test
-    public void calculateMult() {
+    public void calculateMultOneTest() {
         int numberOne = -13;
         int expectedOne = 3;
+        assertEquals(expectedOne, Calculator.calculateMult(numberOne));
+    }
+
+    @Test
+    public void calculateMultTwoTest() {
         int numberTwo = 123;
         int expectedTwo = 6;
+        assertEquals(expectedTwo, Calculator.calculateMult(numberTwo));
+    }
+
+    @Test
+    public void calculateMultThreeTest() {
         int numberThree = 3;
         int expectedThree = 3;
-        assertEquals(expectedOne, Calculator.calculateMult(numberOne));
-        assertEquals(expectedTwo, Calculator.calculateMult(numberTwo));
         assertEquals(expectedThree, Calculator.calculateMult(numberThree));
     }
 }

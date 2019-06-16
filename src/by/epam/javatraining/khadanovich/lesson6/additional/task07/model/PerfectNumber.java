@@ -2,7 +2,6 @@ package by.epam.javatraining.khadanovich.lesson6.additional.task07.model;
 
 public class PerfectNumber {
 
-
     public static boolean isNumberPerfect(int numberToCheck) {
         int sum = 0;
         int halfSize = numberToCheck / 2;
