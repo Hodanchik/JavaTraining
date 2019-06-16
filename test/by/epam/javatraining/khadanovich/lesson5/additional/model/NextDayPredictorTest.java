@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 public class NextDayPredictorTest {
 
     @Test
-    public void determinateNextDayOne() {
+    public void determinateNextDayOneTest() {
         int day = 30;
         int month = 2;
         int year = 1892;
@@ -16,7 +16,7 @@ public class NextDayPredictorTest {
     }
 
     @Test
-    public void determinateNextDayTwo() {
+    public void determinateNextDayTwoTest() {
         int day = 18;
         int month = 3;
         int year = 1998;
@@ -25,7 +25,7 @@ public class NextDayPredictorTest {
     }
 
     @Test
-    public void determinateNextDayThree() {
+    public void determinateNextDayThreeTest() {
         int day = 31;
         int month = 3;
         int year = 1892;
@@ -34,7 +34,7 @@ public class NextDayPredictorTest {
     }
 
     @Test
-    public void determinateNextDayFour() {
+    public void determinateNextDayFourTest() {
         int day = 31;
         int month = 12;
         int year = 1899;
@@ -43,7 +43,7 @@ public class NextDayPredictorTest {
     }
 
     @Test
-    public void determinateNextDayFive() {
+    public void determinateNextDayFiveTest() {
         int day = 31;
         int month = 4;
         int year = 1893;
