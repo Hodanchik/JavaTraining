@@ -1,0 +1,18 @@
+2019-06-20 10:43:29 Printer:12 = assistant calculate Calories of First Salad: 33
+2019-06-20 10:43:29 Printer:12 = assistant calculate weight of First Salad: 60.0
+2019-06-20 10:43:29 Printer:12 = assistant find ingredients in first salad between 5 and 50 callories: Salad{Tomato, Onion, Pepper, }
+2019-06-20 10:43:29 Printer:12 = assistant find the high calorie vegetable in first salad: Pepper{ Pepper weight=10 calories= 27 quantityVitC= 168 quantityProtein= 1 quantityCarbohydrate= 6}
+2019-06-20 10:43:29 Printer:12 = assistant find the vegetable contain the high Vit C of First Salad: Pepper{ Pepper weight=10 calories= 27 quantityVitC= 168 quantityProtein= 1 quantityCarbohydrate= 6}
+2019-06-20 10:43:29 Printer:12 = assistant find the lowest calorie vegetable in first salad: Tomato{hasJuice=falseTomato weight=100 calories= 23 quantityVitC= 17 quantityProtein= 2 quantityCarbohydrate= 4}
+2019-06-20 10:43:29 Printer:12 = assistant assistant find the lowest vegetable contain the high Vit C of First Salad:Onion{Onion weight=20 causeTears=false calories= 41 quantityVitC= 5 quantityProtein= 2 quantityCarbohydrate= 9}
+2019-06-20 10:43:29 Printer:12 = assistant find ingredients in first salad between 1 and 10 protein: Salad{Tomato, Onion, Pepper, }
+2019-06-20 10:43:29 Printer:12 = assistant sort ingredients in first salad by weight:  Salad{Pepper, Onion, Tomato, }
+2019-06-20 10:43:29 Printer:12 = assistant calculate Calories of second Salad: 328
+2019-06-20 10:43:29 Printer:12 = assistant calculate weight of second Salad: 300.0
+2019-06-20 10:43:29 Printer:12 = assistant find ingredients in second salad between 5 and 50 callories: Salad{Tomato, Onion, Pepper, Cabbage, Cucumber, }
+2019-06-20 10:43:29 Printer:12 = assistant find the high calorie vegetable in second salad: Cabbage{countsSheet=0Cabbage weight=20 calories= 27 quantityVitC= 44 quantityProtein= 2 quantityCarbohydrate= 5}
+2019-06-20 10:43:29 Printer:12 = assistant find the vegetable contain the high Vit C of second Salad: Cabbage{countsSheet=0Cabbage weight=20 calories= 27 quantityVitC= 44 quantityProtein= 2 quantityCarbohydrate= 5}
+2019-06-20 10:43:29 Printer:12 = assistant find the lowest calorie vegetable in second salad: Cucumber{countPimples=0, bitterButt=falseCucumber weight=50 calories= 15 quantityVitC= 8 quantityProtein= 1 quantityCarbohydrate= 2}
+2019-06-20 10:43:29 Printer:12 = assistant assistant find the lowest vegetable contain the high Vit C of second Salad:Cucumber{countPimples=0, bitterButt=falseCucumber weight=50 calories= 15 quantityVitC= 8 quantityProtein= 1 quantityCarbohydrate= 2}
+2019-06-20 10:43:29 Printer:12 = assistant find ingredients in second salad between 1 and 10 protein: Salad{Tomato, Onion, Pepper, Broccoli, Cabbage, Cucumber, }
+2019-06-20 10:43:29 Printer:12 = assistant sort ingredients in second salad by weight:  Salad{Cabbage, Onion, Pepper, Cucumber, Tomato, Broccoli, }

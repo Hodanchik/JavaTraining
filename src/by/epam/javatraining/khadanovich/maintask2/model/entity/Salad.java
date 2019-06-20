@@ -23,7 +23,7 @@ public class Salad {
     }
 
     public void add(Vegetable vegetable) {
-        if (vegetable == null ){
+        if (vegetable == null) {
             logger.warn("attempt add vegetable value NULL");
             return;
         }
@@ -35,7 +35,7 @@ public class Salad {
     }
 
     public void add(Vegetable... vegetable) {
-        if (vegetable == null ){
+        if (vegetable == null) {
             logger.warn("attempt add vegetable value NULL");
             return;
         }
@@ -78,7 +78,7 @@ public class Salad {
     }
 
     public boolean checkContainVegetable(Vegetable vegetable) {
-        if (vegetable == null ){
+        if (vegetable == null) {
             logger.warn("attempt check vegetable value NULL");
             return false;
         }
@@ -89,6 +89,7 @@ public class Salad {
         }
         return false;
     }
+
     public void remove(int index) {
         if (index < 0) {
             logger.warn("attempt remove vegetable negative index");
@@ -151,7 +152,7 @@ public class Salad {
     public String toString() {
         final StringBuilder sb = new StringBuilder("Salad{");
         for (int i = 0; i < size; i++) {
-            sb.append (vegetableArray[i].getClass().getSimpleName());
+            sb.append(vegetableArray[i].getClass().getSimpleName());
             sb.append(", ");
         }
         sb.append('}');

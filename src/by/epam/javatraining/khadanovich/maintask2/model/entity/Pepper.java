@@ -2,13 +2,14 @@ package by.epam.javatraining.khadanovich.maintask2.model.entity;
 
 public class Pepper extends Vegetable {
     private static int calories = 27;
-    private static int quantityVitC= 168;
-    private static int quantityProtein= 1;
-    private static int quantityCarbohydrate= 6;
+    private static int quantityVitC = 168;
+    private static int quantityProtein = 1;
+    private static int quantityCarbohydrate = 6;
 
     public Pepper(int weight) {
         super(weight);
     }
+
     @Override
     public int getCalories() {
         return calories;
@@ -47,7 +48,7 @@ public class Pepper extends Vegetable {
 
     @Override
     public String toString() {
-        return "Pepper{ " + super.toString()+
+        return "Pepper{ " + super.toString() +
                 " calories= " + calories +
                 " quantityVitC= " + quantityVitC +
                 " quantityProtein= " + quantityProtein +

@@ -40,7 +40,7 @@ public abstract class Vegetable {
 
     @Override
     public String toString() {
-        return  getClass().getSimpleName() +
+        return getClass().getSimpleName() +
                 " weight=" + weight;
     }
 }

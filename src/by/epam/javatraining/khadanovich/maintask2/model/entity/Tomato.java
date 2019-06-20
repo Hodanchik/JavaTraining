@@ -6,9 +6,9 @@ public class Tomato extends Vegetable {
 
     private boolean hasJuice;
     private static int calories = 23;
-    private static int quantityVitC= 17;
-    private static int quantityProtein= 2;
-    private static int quantityCarbohydrate= 4;
+    private static int quantityVitC = 17;
+    private static int quantityProtein = 2;
+    private static int quantityCarbohydrate = 4;
 
     public Tomato(int weight) {
         super(weight);

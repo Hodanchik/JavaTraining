@@ -95,13 +95,37 @@ public class SaladAssistantTest {
 
     @Test
     public void findTheLowestVitCVegetableTest() {
+        int tomatoWeight = 10;
+        int onionWeight = 20;
+        int pepperWeight = 100;
+        Salad salad = new Salad();
+        salad.add(new Tomato(tomatoWeight), new Onion(onionWeight), new Pepper(pepperWeight));
+        Vegetable expectedVeg = new Onion(onionWeight);
+        SaladAssistant assistant = new SaladAssistant();
+        assertEquals(expectedVeg, assistant.findTheLowestVitCVegetable(salad));
     }
 
     @Test
     public void findTheHighCalorieVegetableTest() {
+        int tomatoWeight = 10;
+        int onionWeight = 20;
+        int pepperWeight = 100;
+        Salad salad = new Salad();
+        salad.add(new Tomato(tomatoWeight), new Onion(onionWeight), new Pepper(pepperWeight));
+        Vegetable expectedVeg = new Onion(onionWeight);
+        SaladAssistant assistant = new SaladAssistant();
+        assertEquals(expectedVeg, assistant.findTheHighCalorieVegetable(salad));
     }
 
     @Test
     public void findTheLowestCalorieVegetableTest() {
+        int tomatoWeight = 10;
+        int onionWeight = 20;
+        int pepperWeight = 100;
+        Salad salad = new Salad();
+        salad.add(new Tomato(tomatoWeight), new Onion(onionWeight), new Pepper(pepperWeight));
+        Vegetable expectedVeg = new Tomato(tomatoWeight);
+        SaladAssistant assistant = new SaladAssistant();
+        assertEquals(expectedVeg, assistant.findTheLowestCalorieVegetable(salad));
     }
 }

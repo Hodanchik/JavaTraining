@@ -5,9 +5,9 @@ import java.util.Objects;
 public class Onion extends Vegetable {
     private boolean causeTears;
     private static int calories = 41;
-    private static int quantityVitC= 5;
-    private static int quantityProtein= 2;
-    private static int quantityCarbohydrate= 9;
+    private static int quantityVitC = 5;
+    private static int quantityProtein = 2;
+    private static int quantityCarbohydrate = 9;
 
     public Onion(int weight) {
         super(weight);

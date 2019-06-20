@@ -7,9 +7,9 @@ public class Cucumber extends Vegetable {
     private boolean bitterButt;
 
     private static int calories = 15;
-    private static int quantityVitC= 8;
-    private static int quantityProtein= 1;
-    private static int quantityCarbohydrate= 2;
+    private static int quantityVitC = 8;
+    private static int quantityProtein = 1;
+    private static int quantityCarbohydrate = 2;
 
     public Cucumber(int weight) {
         super(weight);
